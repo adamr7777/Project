@@ -1,0 +1,27 @@
+
+
+
+#nav {
+  background: #cdb1ba;
+  height: 60px;
+}
+
+
+#login-div {
+  background: #e6d8dc;
+  display: flex;
+  height: 700px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*border: 2px dotted black; ;*/
+}
+
+
+button {
+  width: 90px;
+}
+
+input {
+  width: 200px;
+}
