@@ -13,3 +13,45 @@ p {
   text-align: right;
   margin-right: 100px;
 }
+
+#main {
+  padding-bottom:50px;
+  height: 150px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#writer {
+  padding-top: 30px;
+  width: 93.33331px;
+  height: 70px;
+  margin-right: 80px;
+}
+
+
+#mage {
+  padding-top: 30px;
+  width: 93.33331px;
+  height: 70px;
+
+}
+
+
+.image {
+  width: 93.33331px;
+  height: 70px;
+}
+
+
+.image:hover {
+  width: 120px;
+  height: 90px;
+}
+
+h3 {
+  margin-top: 80px;
+}

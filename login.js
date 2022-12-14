@@ -1,11 +1,16 @@
 
 
+//Variables
+
 const formEl = document.getElementById('form-el');
 const registerBtn = document.getElementById('register-btn');
 const paraEl = document.getElementById('welcome');
-//const loginBtn = document.getElementById('login-btn')
+const mainPage = 'http://127.0.0.1:3000/a_p1/mainPage.html';
+//const loginBtn = document.getElementById('login-btn');
 
 
+
+//Event Listeners
 
 registerBtn.addEventListener('click', toRegister);
 
@@ -19,6 +24,7 @@ formEl.addEventListener('submit', function(e) {
       paraEl.textContent = message;
       let loggedInName = element.name; //export to main.js
       localStorage.setItem('loggedInName', JSON.stringify(loggedInName));
+      window.location.href = mainPage;
     }
     else {
       //let the c know that password or username is incorrect
@@ -26,6 +32,8 @@ formEl.addEventListener('submit', function(e) {
 });
 
 
+
+//Functions
 
 function toRegister() {
   let registerData = [];
@@ -36,6 +44,7 @@ function toRegister() {
   registerData.push({name: formEl.user.value, password: formEl.password.value});
   localStorage.setItem('mainData', JSON.stringify(registerData));
   formEl.reset();
-  window.location.reload();
-
+  //window.location.reload();
+  const registerMsg = 'Registration successful, please log in';
+  paraEl.textContent = registerMsg;
 }
