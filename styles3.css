@@ -9,11 +9,21 @@ h2 {
   margin-top: 120px;
 }
 
-p {
+#login-name-el {
   text-align: right;
   margin-right: 100px;
 }
 
+#go-back {
+  text-align: left;
+  margin-left: 100px;
+}
+
 #text-area {
   resize: none;
+}
+
+
+#save {
+  margin-top: 50px;
 }

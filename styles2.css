@@ -11,7 +11,13 @@ h2 {
 
 p {
   text-align: right;
-  margin-right: 100px;
+  margin-right: 10px;
+}
+
+#logout-btn {
+  width: 70px;
+  border: none;
+  border-radius: 10px;
 }
 
 #main {
@@ -54,4 +60,9 @@ p {
 
 h3 {
   margin-top: 80px;
+}
+
+#nav-right {
+  display: flex;
+  justify-content: flex-end;
 }

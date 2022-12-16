@@ -37,14 +37,24 @@ formEl.addEventListener('submit', function(e) {
 
 function toRegister() {
   let registerData = [];
-  const mainData = JSON.parse(localStorage.getItem('mainData'));
-  for (let element of mainData) {
-    registerData.push(element);
+  if (JSON.parse(localStorage.getItem('mainData'))) {
+    const mainData = JSON.parse(localStorage.getItem('mainData'));
+    for (let element of mainData) {
+      registerData.push(element);
+    }
+    registerData.push({name: formEl.user.value, password: formEl.password.value, diary:``,});
+    localStorage.setItem('mainData', JSON.stringify(registerData));
+    formEl.reset();
+    //window.location.reload();
+    const registerMsg = 'Registration successful, please log in';
+    paraEl.textContent = registerMsg;
   }
-  registerData.push({name: formEl.user.value, password: formEl.password.value});
-  localStorage.setItem('mainData', JSON.stringify(registerData));
-  formEl.reset();
-  //window.location.reload();
-  const registerMsg = 'Registration successful, please log in';
-  paraEl.textContent = registerMsg;
+  else {
+    registerData.push({name: formEl.user.value, password: formEl.password.value, diary:``,});
+    localStorage.setItem('mainData', JSON.stringify(registerData));
+    formEl.reset();
+    //window.location.reload();
+    const registerMsg = 'Registration successful, please log in';
+    paraEl.textContent = registerMsg;
+  }
 }
