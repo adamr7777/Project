@@ -4,13 +4,11 @@ const loginNameEl = document.getElementById('login-name-el');
 //const loginUrl = 'http://127.0.0.1:3000/a_p1/';             //copy to writer page
 const saveBtn = document.getElementById('save');
 const textArea = document.getElementById('text-area');
-const userIndex = getUserObjectIndex(); //to function 'resume your work'
-const mainData = JSON.parse(localStorage.getItem('mainData')); //to function 'resume your work'
+const loadBtn = document.getElementById('load');
 
 
 loginNameEl.textContent = `Hello, ${loggedInName}`;
 
-textArea.value = mainData[userIndex].diary; //to function 'resume your work'
 
 
 
@@ -23,13 +21,21 @@ logoutBtn.addEventListener('click', function() {            //copy to writer pag
 })
 */
 
-
+//Event Listeners
 saveBtn.addEventListener('click', function() {
   const index = getUserObjectIndex();
   const mainData = JSON.parse(localStorage.getItem('mainData'));
   mainData[index].diary = textArea.value;
   localStorage.setItem('mainData', JSON.stringify(mainData));
 });
+
+
+loadBtn.addEventListener('click', function() {
+  const userIndex = getUserObjectIndex(); //to function 'resume your work'
+  const mainData = JSON.parse(localStorage.getItem('mainData')); //to function 'resume your work'
+  textArea.value = mainData[userIndex].diary; //to function 'resume your work'
+})
+
 
 
 //functions
