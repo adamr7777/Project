@@ -5,7 +5,7 @@
 const formEl = document.getElementById('form-el');
 const registerBtn = document.getElementById('register-btn');
 const paraEl = document.getElementById('welcome');
-const mainPage = 'http://127.0.0.1:3000/p1/mainPage.html';
+const mainPage = 'https://adomasr.github.io/Project/mainPage.html'; //http://127.0.0.1:3000/p1/mainPage.html 
 //const loginBtn = document.getElementById('login-btn');
 
 

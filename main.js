@@ -4,9 +4,9 @@ const loginNameEl = document.getElementById('login-name-el');
 const writerDiv = document.getElementById('writer');
 const mageDiv = document.getElementById('mage');
 //const writerImage = document.getElementById('writerImage');
-const writerUrl = 'http://127.0.0.1:3000/p1/writer.html';
-const logoutBtn = document.getElementById('logout-btn');    //copy to writer page
-const loginUrl = 'http://127.0.0.1:3000/p1/';             //copy to writer page
+const writerUrl = 'https://adomasr.github.io/Project/writer.html'; //http://127.0.0.1:3000/p1/writer.html
+const logoutBtn = document.getElementById('logout-btn');
+const loginUrl = 'https://adomasr.github.io/Project/'; //http://127.0.0.1:3000/p1/
 
 loginNameEl.textContent = `Hello, ${loggedInName}`;
 
